@@ -1,6 +1,6 @@
 {
   "name": "yom-sanitize-html",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sanitize html with browser-sanitize-html and domify",
   "keywords": [
     "sanitize",

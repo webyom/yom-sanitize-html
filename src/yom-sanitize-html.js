@@ -15,11 +15,14 @@ function defaultFn(node) {
 }
 
 module.exports = function (html, fn) {
-  const el = sanitize(domify(html).cloneNode(true), fn || defaultFn);
+  if (!html) {
+    return '';
+  }
+  var el = sanitize(domify(html).cloneNode(true), fn || defaultFn);
   if (!el) {
     return '';
   }
-  const div = document.createElement('div');
+  var div = document.createElement('div');
   div.appendChild(el);
   return div.innerHTML;
 };
